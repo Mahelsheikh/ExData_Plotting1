@@ -1,0 +1,12 @@
+png(filename = "plot4.png")
+par(mfcol = c(2,2),mar = c(4,4,2,1), oma= c(0,0,2,0))
+with(feb,{
+        plot(datetime,Global_active_power,type="l", xlab="",ylab="Global Active Power (killowatts)")
+        plot(datetime,Sub_metering_1,type = "n",ylab="Energy sub metering",xlab="")
+        points(datetime,Sub_metering_1,col = "black", type = "l")
+        points(datetime,Sub_metering_2,col = "red", type = "l")
+        points(datetime,Sub_metering_3,col = "blue", type = "l")
+        plot(datetime,Voltage,type="l",xlab = "datetime",ylab="Voltage",col= "black")
+        plot(datetime,Global_reactive_power,type="l",xlab = "datetime",ylab="Global_reactive_power",col= "black")
+})
+dev.off()

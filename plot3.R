@@ -1,0 +1,7 @@
+png(filename = "plot3.png")
+with(feb,plot(datetime,Sub_metering_1,type = "n",ylab="Energy sub metering",xlab=""))
+with(feb,points(datetime,Sub_metering_1,col = "black", type = "l"))
+with(feb,points(datetime,Sub_metering_2,col = "red", type = "l"))
+with(feb,points(datetime,Sub_metering_3,col = "blue", type = "l"))
+legend("topright",pch = 95, col = c("black","red","blue"), legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+dev.off()
