@@ -1,4 +1,3 @@
 png(filename = "plot2.png")
-plot(feb$datetime,feb$Global_active_power, type = "n",xlab = "",ylab ="Global Active Power (killowatts)")
-lines(feb$datetime,feb$Global_active_power,type = "l")
+plot(datetime,Global_active_power,type="l", xlab="",ylab="Global Active Power (killowatts)")
 dev.off()
